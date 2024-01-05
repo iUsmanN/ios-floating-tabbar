@@ -8,7 +8,13 @@
 import Foundation
 import SwiftUI
 
-enum TabbedItem: Int, CaseIterable {
+protocol TabItemProtocol: CaseIterable {
+    var title: String { get }
+    var iconName: String { get }
+    static func cases() -> [any TabItemProtocol]
+}
+
+enum TabbedItem: Int, TabItemProtocol {
     case one
     case two
     case three
@@ -51,5 +57,9 @@ enum TabbedItem: Int, CaseIterable {
         case .four:
             return .yellow
         }
+    }
+    
+    static func cases() -> [any TabItemProtocol] {
+        return self.allCases
     }
 }

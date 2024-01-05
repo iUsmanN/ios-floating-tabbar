@@ -7,21 +7,22 @@
 
 import SwiftUI
 
-struct Tabiew: View {
+struct Tabiew<Content: View>: View {
     
     @State var selected: Int = 0
+    
+    let content: Content
+    let tabs: any TabItemProtocol.Type
+    
+    init(tabItems: any TabItemProtocol.Type, @ViewBuilder content: () -> Content) {
+        self.content = content()
+        self.tabs = tabItems
+    }
     
     var body: some View {
         ZStack(alignment: .bottom) {
             TabView(selection: $selected) {
-                One()
-                    .tag(0)
-                Two()
-                    .tag(1)
-                Three()
-                    .tag(2)
-                Four()
-                    .tag(3)
+                content
             }
             
             ZStack{
@@ -41,7 +42,7 @@ struct Tabiew: View {
             .frame(height: 70)
             .background(.ultraThinMaterial)
             .cornerRadius(25)
-            .padding(5)
+            //            .padding(5)
         }
     }
     
@@ -60,5 +61,14 @@ struct Tabiew: View {
 }
 
 #Preview {
-    Tabiew()
+    Tabiew(tabItems: TabbedItem.self) {
+        One()
+            .tag(0)
+        Two()
+            .tag(1)
+        Three()
+            .tag(2)
+        Four()
+            .tag(3)
+    }
 }
