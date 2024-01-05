@@ -8,27 +8,26 @@
 import SwiftUI
 
 struct Tabiew<Content: View>: View {
-    
     @State var selected: Int = 0
-    
+
     let content: Content
-    let tabs: any TabItemProtocol.Type
-    
-    init(tabItems: any TabItemProtocol.Type, @ViewBuilder content: () -> Content) {
+    let tabs: TabbedItem.Type
+
+    init(tabItems: TabbedItem.Type, @ViewBuilder content: () -> Content) {
         self.content = content()
         self.tabs = tabItems
     }
-    
+
     var body: some View {
         ZStack(alignment: .bottom) {
             TabView(selection: $selected) {
                 content
             }
-            
-            ZStack{
-                HStack{
-                    ForEach((TabbedItem.allCases), id: \.self){ item in
-                        Button{
+
+            ZStack {
+                HStack {
+                    ForEach(tabs.allCases, id: \.self) { item in
+                        Button {
                             selected = item.rawValue
                         } label: {
                             tabiewItem(item: item, active: (selected == item.rawValue))
@@ -42,7 +41,6 @@ struct Tabiew<Content: View>: View {
             .frame(height: 70)
             .background(.ultraThinMaterial)
             .cornerRadius(25)
-            //            .padding(5)
         }
     }
     

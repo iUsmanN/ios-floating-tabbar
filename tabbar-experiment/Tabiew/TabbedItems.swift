@@ -11,10 +11,11 @@ import SwiftUI
 protocol TabItemProtocol: CaseIterable {
     var title: String { get }
     var iconName: String { get }
-    static func cases() -> [any TabItemProtocol]
+    static func cases() -> [Self]
 }
 
-enum TabbedItem: Int, TabItemProtocol {
+enum TabbedItem: Int, CaseIterable {
+    
     case one
     case two
     case three
@@ -57,9 +58,5 @@ enum TabbedItem: Int, TabItemProtocol {
         case .four:
             return .yellow
         }
-    }
-    
-    static func cases() -> [any TabItemProtocol] {
-        return self.allCases
     }
 }
