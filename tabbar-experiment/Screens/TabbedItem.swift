@@ -1,5 +1,5 @@
 //
-//  TabbedItems.swift
+//  TabbedItem.swift
 //  tabbar-experiment
 //
 //  Created by Usman Nazir on 05/01/2024.
@@ -8,13 +8,9 @@
 import Foundation
 import SwiftUI
 
-protocol TabItemProtocol: CaseIterable {
-    var title: String { get }
-    var iconName: String { get }
-    static func cases() -> [Self]
-}
-
-enum TabbedItem: Int, CaseIterable {
+enum TabbedItem: Int, FloatingTabItemProtocol {
+    
+    var id: Int { self.rawValue }
     
     case one
     case two
@@ -58,5 +54,9 @@ enum TabbedItem: Int, CaseIterable {
         case .four:
             return .yellow
         }
+    }
+    
+    static func cases() -> [TabbedItem] {
+        return allCases
     }
 }

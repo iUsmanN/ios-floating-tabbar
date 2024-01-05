@@ -9,8 +9,16 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-//        Tabiew()
-        Text("A")
+        FloatingTabView(tabItems: TabbedItem.self) {
+            One()
+                .tag(0)
+            Two()
+                .tag(1)
+            Three()
+                .tag(2)
+            Four()
+                .tag(3)
+        }
     }
 }
 

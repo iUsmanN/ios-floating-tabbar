@@ -15,8 +15,9 @@
 		97F4017B2B481DC000F7ED90 /* Two.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F4017A2B481DC000F7ED90 /* Two.swift */; };
 		97F4017D2B481DD100F7ED90 /* Three.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F4017C2B481DD100F7ED90 /* Three.swift */; };
 		97F4017F2B481DE500F7ED90 /* Four.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F4017E2B481DE500F7ED90 /* Four.swift */; };
-		97F401822B481E2100F7ED90 /* TabbedItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F401812B481E2100F7ED90 /* TabbedItems.swift */; };
-		97F401842B481ED600F7ED90 /* Tabiew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F401832B481ED600F7ED90 /* Tabiew.swift */; };
+		97F401822B481E2100F7ED90 /* FloatingTabItemProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F401812B481E2100F7ED90 /* FloatingTabItemProtocol.swift */; };
+		97F401842B481ED600F7ED90 /* FloatingTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F401832B481ED600F7ED90 /* FloatingTabView.swift */; };
+		97F401862B4850D100F7ED90 /* TabbedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F401852B4850D100F7ED90 /* TabbedItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,8 +30,9 @@
 		97F4017A2B481DC000F7ED90 /* Two.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Two.swift; sourceTree = "<group>"; };
 		97F4017C2B481DD100F7ED90 /* Three.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Three.swift; sourceTree = "<group>"; };
 		97F4017E2B481DE500F7ED90 /* Four.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Four.swift; sourceTree = "<group>"; };
-		97F401812B481E2100F7ED90 /* TabbedItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbedItems.swift; sourceTree = "<group>"; };
-		97F401832B481ED600F7ED90 /* Tabiew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabiew.swift; sourceTree = "<group>"; };
+		97F401812B481E2100F7ED90 /* FloatingTabItemProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingTabItemProtocol.swift; sourceTree = "<group>"; };
+		97F401832B481ED600F7ED90 /* FloatingTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingTabView.swift; sourceTree = "<group>"; };
+		97F401852B4850D100F7ED90 /* TabbedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbedItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +65,7 @@
 		97F401682B481D6500F7ED90 /* tabbar-experiment */ = {
 			isa = PBXGroup;
 			children = (
-				97F401802B481E0600F7ED90 /* Tabiew */,
+				97F401802B481E0600F7ED90 /* FloatingTabView */,
 				97F401772B481D9700F7ED90 /* Screens */,
 				97F401692B481D6500F7ED90 /* tabbar_experimentApp.swift */,
 				97F4016B2B481D6500F7ED90 /* ContentView.swift */,
@@ -88,17 +90,18 @@
 				97F4017A2B481DC000F7ED90 /* Two.swift */,
 				97F4017C2B481DD100F7ED90 /* Three.swift */,
 				97F4017E2B481DE500F7ED90 /* Four.swift */,
+				97F401852B4850D100F7ED90 /* TabbedItem.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
 		};
-		97F401802B481E0600F7ED90 /* Tabiew */ = {
+		97F401802B481E0600F7ED90 /* FloatingTabView */ = {
 			isa = PBXGroup;
 			children = (
-				97F401812B481E2100F7ED90 /* TabbedItems.swift */,
-				97F401832B481ED600F7ED90 /* Tabiew.swift */,
+				97F401812B481E2100F7ED90 /* FloatingTabItemProtocol.swift */,
+				97F401832B481ED600F7ED90 /* FloatingTabView.swift */,
 			);
-			path = Tabiew;
+			path = FloatingTabView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,10 +177,11 @@
 				97F4016C2B481D6500F7ED90 /* ContentView.swift in Sources */,
 				97F4016A2B481D6500F7ED90 /* tabbar_experimentApp.swift in Sources */,
 				97F4017B2B481DC000F7ED90 /* Two.swift in Sources */,
-				97F401842B481ED600F7ED90 /* Tabiew.swift in Sources */,
+				97F401842B481ED600F7ED90 /* FloatingTabView.swift in Sources */,
 				97F4017D2B481DD100F7ED90 /* Three.swift in Sources */,
 				97F401792B481DAD00F7ED90 /* One.swift in Sources */,
-				97F401822B481E2100F7ED90 /* TabbedItems.swift in Sources */,
+				97F401862B4850D100F7ED90 /* TabbedItem.swift in Sources */,
+				97F401822B481E2100F7ED90 /* FloatingTabItemProtocol.swift in Sources */,
 				97F4017F2B481DE500F7ED90 /* Four.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

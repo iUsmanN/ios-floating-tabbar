@@ -9,7 +9,7 @@ import SwiftUI
 
 struct Two: View {
     var body: some View {
-        Image("2")
+        Image("3")
             .resizable()
             .scaledToFill()
             .ignoresSafeArea()
