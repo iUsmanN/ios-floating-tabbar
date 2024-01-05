@@ -67,7 +67,7 @@ import SwiftUI
 /// }
 /// ```
 ///
-protocol FloatingTabItemProtocol: CaseIterable, Hashable, Identifiable where Self.AllCases.Element == Self {
+public protocol FloatingTabItemProtocol: CaseIterable, Hashable, Identifiable where Self.AllCases.Element == Self {
     var title: String { get }
     var iconName: String { get }
     var tintColor: Color { get }

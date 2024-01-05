@@ -13,7 +13,7 @@ import SwiftUI
 /// - Parameters:
 ///   - T: The type of the tab item conforming to `FloatingTabItemProtocol`.
 ///   - Content: The type of the content view to be displayed in each tab.
-struct FloatingTabView<T: FloatingTabItemProtocol, Content: View>: View {
+public struct FloatingTabView<T: FloatingTabItemProtocol, Content: View>: View {
     /// The currently selected tab index.
     @State var selected: Int = 0
 
@@ -28,13 +28,13 @@ struct FloatingTabView<T: FloatingTabItemProtocol, Content: View>: View {
     /// - Parameters:
     ///   - tabItems: The type of the tab items conforming to `FloatingTabItemProtocol`.
     ///   - content: A closure returning the content view to be displayed.
-    init(tabItems: T.Type, @ViewBuilder content: () -> Content) {
+    public init(tabItems: T.Type, @ViewBuilder content: () -> Content) {
         self.content = content()
         self.tabs = tabItems
     }
 
     /// The body of the `FloatingTabView`.
-    var body: some View {
+    public var body: some View {
         ZStack(alignment: .bottom) {
             TabView(selection: $selected) {
                 content

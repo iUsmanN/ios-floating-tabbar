@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "floatingtabbarswiftui",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/iUsmanN/FloatingTabBarSwiftUI",
+      "state" : {
+        "branch" : "main",
+        "revision" : "7f842c79599eead8a52acb3a3ddf9cb39d8d7d9c"
+      }
+    }
+  ],
+  "version" : 2
+}

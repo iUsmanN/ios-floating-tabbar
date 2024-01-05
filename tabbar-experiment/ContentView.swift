@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import FloatingTabViewSwiftUI
 
 struct ContentView: View {
     var body: some View {
@@ -16,8 +17,6 @@ struct ContentView: View {
                 .tag(1)
             Three()
                 .tag(2)
-            Four()
-                .tag(3)
         }
     }
 }

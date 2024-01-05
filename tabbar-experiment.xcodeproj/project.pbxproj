@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		978266752B488645005BC979 /* FloatingTabViewSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 978266742B488645005BC979 /* FloatingTabViewSwiftUI */; };
 		97F4016A2B481D6500F7ED90 /* tabbar_experimentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F401692B481D6500F7ED90 /* tabbar_experimentApp.swift */; };
 		97F4016C2B481D6500F7ED90 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F4016B2B481D6500F7ED90 /* ContentView.swift */; };
 		97F4016E2B481D6600F7ED90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97F4016D2B481D6600F7ED90 /* Assets.xcassets */; };
@@ -15,8 +16,6 @@
 		97F4017B2B481DC000F7ED90 /* Two.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F4017A2B481DC000F7ED90 /* Two.swift */; };
 		97F4017D2B481DD100F7ED90 /* Three.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F4017C2B481DD100F7ED90 /* Three.swift */; };
 		97F4017F2B481DE500F7ED90 /* Four.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F4017E2B481DE500F7ED90 /* Four.swift */; };
-		97F401822B481E2100F7ED90 /* FloatingTabItemProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F401812B481E2100F7ED90 /* FloatingTabItemProtocol.swift */; };
-		97F401842B481ED600F7ED90 /* FloatingTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F401832B481ED600F7ED90 /* FloatingTabView.swift */; };
 		97F401862B4850D100F7ED90 /* TabbedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F401852B4850D100F7ED90 /* TabbedItem.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,8 +29,6 @@
 		97F4017A2B481DC000F7ED90 /* Two.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Two.swift; sourceTree = "<group>"; };
 		97F4017C2B481DD100F7ED90 /* Three.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Three.swift; sourceTree = "<group>"; };
 		97F4017E2B481DE500F7ED90 /* Four.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Four.swift; sourceTree = "<group>"; };
-		97F401812B481E2100F7ED90 /* FloatingTabItemProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingTabItemProtocol.swift; sourceTree = "<group>"; };
-		97F401832B481ED600F7ED90 /* FloatingTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingTabView.swift; sourceTree = "<group>"; };
 		97F401852B4850D100F7ED90 /* TabbedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbedItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -40,17 +37,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				978266752B488645005BC979 /* FloatingTabViewSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9782666E2B4882B3005BC979 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		97F4015D2B481D6500F7ED90 = {
 			isa = PBXGroup;
 			children = (
 				97F401682B481D6500F7ED90 /* tabbar-experiment */,
 				97F401672B481D6500F7ED90 /* Products */,
+				9782666E2B4882B3005BC979 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,8 +104,6 @@
 		97F401802B481E0600F7ED90 /* FloatingTabView */ = {
 			isa = PBXGroup;
 			children = (
-				97F401812B481E2100F7ED90 /* FloatingTabItemProtocol.swift */,
-				97F401832B481ED600F7ED90 /* FloatingTabView.swift */,
 			);
 			path = FloatingTabView;
 			sourceTree = "<group>";
@@ -120,6 +124,9 @@
 			dependencies = (
 			);
 			name = "tabbar-experiment";
+			packageProductDependencies = (
+				978266742B488645005BC979 /* FloatingTabViewSwiftUI */,
+			);
 			productName = "tabbar-experiment";
 			productReference = 97F401662B481D6500F7ED90 /* tabbar-experiment.app */;
 			productType = "com.apple.product-type.application";
@@ -148,6 +155,9 @@
 				Base,
 			);
 			mainGroup = 97F4015D2B481D6500F7ED90;
+			packageReferences = (
+				978266732B488645005BC979 /* XCRemoteSwiftPackageReference "FloatingTabBarSwiftUI" */,
+			);
 			productRefGroup = 97F401672B481D6500F7ED90 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -177,11 +187,9 @@
 				97F4016C2B481D6500F7ED90 /* ContentView.swift in Sources */,
 				97F4016A2B481D6500F7ED90 /* tabbar_experimentApp.swift in Sources */,
 				97F4017B2B481DC000F7ED90 /* Two.swift in Sources */,
-				97F401842B481ED600F7ED90 /* FloatingTabView.swift in Sources */,
 				97F4017D2B481DD100F7ED90 /* Three.swift in Sources */,
 				97F401792B481DAD00F7ED90 /* One.swift in Sources */,
 				97F401862B4850D100F7ED90 /* TabbedItem.swift in Sources */,
-				97F401822B481E2100F7ED90 /* FloatingTabItemProtocol.swift in Sources */,
 				97F4017F2B481DE500F7ED90 /* Four.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -388,6 +396,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		978266732B488645005BC979 /* XCRemoteSwiftPackageReference "FloatingTabBarSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/iUsmanN/FloatingTabBarSwiftUI";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		978266742B488645005BC979 /* FloatingTabViewSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 978266732B488645005BC979 /* XCRemoteSwiftPackageReference "FloatingTabBarSwiftUI" */;
+			productName = FloatingTabViewSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 97F4015E2B481D6500F7ED90 /* Project object */;
 }

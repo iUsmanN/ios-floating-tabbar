@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import FloatingTabViewSwiftUI
 import SwiftUI
 
 enum TabbedItem: Int, FloatingTabItemProtocol {
@@ -15,7 +16,6 @@ enum TabbedItem: Int, FloatingTabItemProtocol {
     case one
     case two
     case three
-    case four
     
     var title: String {
         switch self {
@@ -25,8 +25,6 @@ enum TabbedItem: Int, FloatingTabItemProtocol {
             return "Two"
         case .three:
             return "Three"
-        case .four:
-            return "Four"
         }
     }
     
@@ -38,8 +36,6 @@ enum TabbedItem: Int, FloatingTabItemProtocol {
             return "2.square.fill"
         case .three:
             return "3.square.fill"
-        case .four:
-            return "4.square.fill"
         }
     }
     
@@ -51,8 +47,6 @@ enum TabbedItem: Int, FloatingTabItemProtocol {
             return .blue
         case .three:
             return .green
-        case .four:
-            return .yellow
         }
     }
     
